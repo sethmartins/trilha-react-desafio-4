@@ -9,9 +9,17 @@ export const ButtonContainer = styled.button`
 
     border: 1px solid #81259D;
     border-radius: 21px;
+     
+    &:disabled {
+    display: ${(props) => (props.disabled === false ? "disabled": "insert" )};
+    opacity: ${(props) => (props.disabled === false ? "1":"0.4"  )};
+    }
+
 
     &:hover {
         opacity: 0.6;
         cursor:pointer;
     }
+
+    
 `
